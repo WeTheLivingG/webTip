@@ -1,0 +1,42 @@
+npm i yarn -g
+yarn global add gulp
+yarn add gulp -D/--save -dev(只是开发用，上线不用)
+必须建gulpfile.js
+src里面放源码
+
+const gulp  = require("gulp")
+gulp.task("任务名，默认default",function(){
+return
+})
+
+gulp.src("**/*.*读取任意文件夹下的任意文件")
+gulp.pipe(管道)
+gulp.dest("输出到那里"）
+gulp.src().pipe(gulp.dest())
+
+处理less
+
+处理js
+yarn add gulp-uglify-es -D
+gulp.src(*.js).pipe(gulp.dest())
+const gulp  = require("gulp-uglify").defult
+ 
+yarn mongodWin /启动数据库
+
+yarn start /启动项目
+
+localhost:3000/swagger /接口文档
+
+gulp
+
+yarn指令
+1、yarn init -y /初始化项目
+2、yarn add /安装包
+3、yarn/yarn install /安装包
+4、yarn remove 包名/卸载包
+5、yarn upgrade /更新包
+6、yarn global add/remove/upgrade /全局安装/卸载/升级
+
+
+
+去除高亮

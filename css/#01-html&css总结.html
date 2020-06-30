@@ -1,0 +1,834 @@
+<!-- 生命html版本,这里是h5 -->
+<!DOCTYPE html>
+
+<!-- 设置语言 -->
+<html lang="en">
+  <head>
+    <!-- 字符集 -->
+    <meta charset="UTF-8" />
+
+    <!-- 设置视口 -->
+    <!--
+        viewport  视口属性 只有在移动端浏览器上才有用
+        width=device-width 视口宽度和设备宽度一样，width=500（不用加px单位），width一般设为device-width，height不设置
+        initial-scale 初始化放大比例
+        user-scalable 是否允许用户放大/缩小
+    -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- 兼容模式代码 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- 关键字 -->
+    <meta name="keywords" contain="关键字" />
+
+    <!-- 内容介绍 -->
+    <meta
+      name="description"
+      contain="网站描述，内容要求：1、详细吸引人；2、不要超过120个字；3、补充title与key中未说明的；4、关键词之间用英文逗号隔开"
+    />
+
+    <!-- 标题 -->
+    <title>写网站名+介绍 Geogle:35个中文; Baidu:28个字;</title>
+
+    <!-- ico图标 -->
+    <link
+      rel="shortcut icon"
+      href="favicon.ico"
+      (可以只写上面这一个)
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    ———————————————————————————————— ————————————————————————————————
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- html是前端结构：structure -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 现用字符集：utf-8	<meta charset="UTF-8"> -->
+
+    <!-- 文档类型：html5		<!DOCTYPE html> -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- id/类名 命名规范 -->
+    <!-- 
+      (1)、以数字、字母、中横线命名
+      (2)、长类名用-链接 
+      (3)、不能用数字/-开头
+      (4)、不能用纯数字
+      (5)、不建议使用中文、不建议_命名 
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 一 -->
+
+    ————————————————————————————————
+
+    <!-- 1、块级元素  -->
+    <div></div>
+
+    <!-- 为文字组成的块级元素不能放其他块级元素 -->
+    <h1></h1>
+
+    <!-- 为文字组成的块级元素不能放其他块级元素 -->
+    <p></p>
+
+    <pre></pre>
+
+    <!-- <style> list-style:none; </style> -->
+    <ul>
+      <li>无序列表</li>
+    </ul>
+
+    <ol>
+      <li>有序列表</li>
+    </ol>
+
+    <dl>
+      <dt></dt>
+      <dd>自定义列表</dd>
+    </dl>
+
+    <li></li>
+
+    <!-- h5新加 -->
+    <table></table>
+
+    <header>头部</header>
+
+    <nav>导航</nav>
+
+    <footer>底部</footer>
+
+    <aside>侧边栏</aside>
+
+    <section>区块</section>
+
+    <article>文章</article>
+
+    ————————————————————————————————
+
+    <!-- 2、行内块元素 -->
+    <img src="" alt="显示失败内容" title="鼠标悬停内容" width="" height="" />
+
+    <input type="text" />
+
+    <td></td>
+
+    <button type="button默认提交表单为submit"></button>
+
+    <!-- 可以通过其他元素定位到他上面实现动画背景 -->
+    <video src="" autoplay controls loop>
+      <source src="写多个地址" />
+    </video>
+
+    <audio src="" autoplay controls loop>
+      <source src="写多个地址" />
+    </audio>
+
+    <!-- 成员 -->
+    <!-- 
+         .play()              播放
+         .pause()             暂停
+         .requestFullscreen() 全屏
+         .currentTime         当前时间
+         .duration            总时长
+         .volume              当前音量(0-1)
+    -->
+    ————————————————————————————————
+
+    <!-- 3、行内元素 -->
+    <!-- a里面可以放置其他块级元素，不能放a标签 -->
+    <a
+      href=""
+      target="_blank在新窗口打开/self默认在当前窗口打开/目标弹出方式"
+    ></a>
+
+    <span></span>
+
+    <strong></strong>
+
+    <b></b>
+
+    <em></em>
+
+    <i></i>
+
+    <del></del>
+
+    <s></s>
+
+    <ins></ins>
+
+    <u></u>
+
+    ————————————————————————————————
+
+    <!-- 4、其他标签 -->
+    写在head里面设置默认跳转方式
+    <base href="" target="_blank" />
+
+    横线
+    <hr />
+
+    换行
+    <br />
+
+    ————————————————————————————————
+
+    <!-- 5、特殊标识符 -->
+    <!-- 
+    &nbsp 空格
+
+    &lt <
+
+    &gt >
+
+    &amp &
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 二 -->
+
+    ————————————————————————————————
+
+    <!-- 1、表格标签 -->
+    <!-- <style>border-collapse: collapse;</style> -->
+    <table cellspacing="0" cellpadding="0" width="20px" heigth="20px">
+      <caption></caption>
+
+      <thead>
+        <tr>
+          <td rowspan="删除个数 = 合并个数 - 1" colspan=""></td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th></th>
+          <td></td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 三 -->
+
+    ————————————————————————————————
+
+    <!-- 1、表单元素 -->
+    <!-- <style> 
+      outline:none;取消外边框  
+      resize:none;取消文本框拖动  
+      disabled;  
+      readonly; 
+      autofocus;
+      autocomplete : on/off; 自动填充
+      required; 必填
+      multiple;
+    </style> -->
+
+    <input
+      type="标签类型"
+      name="归类/分伙"
+      value="内容"
+      size="为正整数在页面中的宽度"
+      maxlength="允许输入的最多字符"
+      placeholder="设置默认内容"
+      checked
+      disabled
+      readonly
+    />
+
+    <!-- type类型
+      1、text 单行文本输入框
+      2、password 密码
+      3、radio 单选
+      4、checkbox 多选
+      5、button 按钮
+      6、submit 提交
+      7、reset 重置
+      8、image 图片形式的按钮 src=""
+      9、file 文件域 multiple多选文件上传 ===>会有一个.files[0]属性，第几个文件
+      
+      常用于移动端
+      10、url
+      11、email
+      12、tel
+      13、date
+      14、number
+      15、search
+      16、range 拖动滑块 <input type="range" min="0" max="100" value="0" />
+      17、date
+      18、datetime 自己输入
+      19、month 年月
+      20、week 年周
+      21、hidden 隐藏且不占位置的input框
+    -->
+
+    <!-- 案例 1、百度下拉框(没任何用了解) -->
+    <input type="text" value="请输入内容" list="na" />
+    <datalist id="na">
+      <option value="关键字">关键字提示的内容</option>
+      <option value="关键字">关键字提示的内容</option>
+      <option value="关键字">关键字提示的内容</option>
+    </datalist>
+    <!-- 2、相关元素分组(了解) -->
+    <fieldset>
+      <legend>标题</legend>
+      任意内容
+    </fieldset>
+
+    ————————————————————————————————
+
+    <!-- 2、元素绑定 -->
+    <label>你好<input type="radio" /></label>
+
+    <label for="id">你好</label><input id="id" type="radio" />
+
+    <label> 你好 <input type="radio" name="hh" /> </label>
+    <label> 我好 <input type="radio" name="hh" /> </label>
+    <label> 她好 <input type="radio" name="hh" /> </label>
+
+    ————————————————————————————————
+
+    <!-- 3、文本域 -->
+    <!-- resize:none,在style里设置 -->
+    <textarea
+      name=""
+      id=""
+      cols="30 每行字符"
+      rows="10 显示行数"
+      placeholder="设置默认内容"
+      disabled
+      readonly
+    ></textarea>
+
+    ————————————————————————————————
+
+    <!-- 4、下拉菜单 -->
+    <select name="" id="">
+      <option value="selected"></option>
+    </select>
+
+    ————————————————————————————————
+
+    <!-- 5、表单域 -->
+    <form
+      action="传递地址"
+      method="GET/POST提交方式"
+      enctype="multipart/form-data"
+      encoded="application/x-www-form-urlencoded"
+    >
+      以上东西都放到这里，自带.reset()方法，重置内容
+    </form>
+
+    ———————————————————————————————— ————————————————————————————————
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- css 表现:presentation -->
+
+    <!-- h5规范，自定义属性时用data-name开头，可以通过.dataset(是个对象)获取：.dataset.name -->
+
+    <!-- 1、三大特性 -->
+    <!-- 
+      (1)、层叠性
+      (2)、继承性(大部分文本类样式会被继承)
+      (3)、优先级 
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 一、选择器分类 -->
+
+    <!-- 权重计算：标签(0,0,0,1) < 类(0,0,1,0) < id(0,1,0,0) < 行内(1,0,0,0) < !important(无穷大) -->
+
+    ————————————————————————————————
+
+    <!-- 1、基本选择器 -->
+    <!-- 
+      (1)、标签选择器 
+      (2)、类名选择器 .类名 
+      (3)、id选择器 #id 
+      (4)、通配符选择器 * 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 2、复合选择器 -->
+    <!-- 
+      (1)、后代选择器 a b
+      (2)、子代选择器 a>b
+      (3)、并集选择器 a,b
+      (4)、交集选择器 a.b
+    -->
+
+    ————————————————————————————————
+
+    <!-- 3、兄弟选择器 -->
+    <!-- 
+      (1)、div~p div往后的标签里全部的p
+      (2)、div~* div往后的全部标签 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 4、相邻选择器 -->
+    <!-- 
+      (1)、div+p div往后的第一个标签是p就修改，不是不修改
+      (2)、div+* div往后的第一个标签是什么都修改
+    -->
+
+    ————————————————————————————————
+
+    <!-- 5、伪类选择器 -->
+    <!-- 
+      按照lvhao的顺序写
+      (1)、：link 未访问的状态
+      (2)、：visited 访问过的状态
+      (3)、：hover 鼠标移动到上面时的状态
+      (4)、：active 选择时的状态 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 6、结构伪类选择器 -->
+    <!-- 
+     (1)、：first-child 第一个元素
+     (2)、：last-child 最后一个元素
+     (3)、：nth-child(n) 第n个元素 ==> 偶数：n = even/2n 奇数：n = odd/2n+1 全选：n = n 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 7、属性选择器（要是在行内元素存在的属性） -->
+    <!-- 
+      (1)、p[color = "yellow"] 选出黄色字体的p元素
+      (2)、p[color^ = "yellow"] 选出yellow开头的p元素
+      (3)、p[color$ = "yellow"] 选出yellow结尾的p元素
+      (4)、p[color* = "yellow"] 选出有yellow的p元素 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 8、伪元素选择器 -->
+    <!-- 
+      (1)、p::first-letter 第一个字
+      (2)、p::first-line 第一行
+      (3)、p::selection 被选中的内容
+      (4)、div::before{content:"";必须有} 相当于在盒子内容前面加了一个盒子,需要display或者浮动等才显示
+      (5)、div::after{content:"";必须有} 相当于在盒子内容后面加了一个盒子,需要display或者浮动等才显示
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 二、文本样式 -->
+
+    ————————————————————————————————
+
+    <!-- 1、字体样式 -->
+    <!-- 
+      (1)、font-style：normal/italic;
+      (2)、font-weight：lighter/narmal(400)/bold(700)/bolder; 直接写数值没有单位
+      (3)、font-size：
+      (4)、font-family：
+      (5)、vertical-align：top/middle/baseline/bottom; 对齐方式 
+
+      -连写、font: italic 900 100px/100px(行高) 'microsoft yahei'; 
+
+      (6)、text-shadow:同盒子阴影; 字体阴影
+      (7)、letter-spacing:; 字符之间的距离，中文是字体，英文是字母
+      (8)、word-spacing:; 英文单词
+
+      *注意点：
+        ①、网页中普遍为14px
+        ②、尽量使用偶数字符号
+        ③、字体名字用,隔开，系统会按照从头到尾的顺序找字体
+        ④、字体用为中文、含空格、#、$符号的要用""包起来
+        ⑤、英文字体必须在中文字体前面
+        ⑥、尽量使用默认字体
+    -->
+
+    ————————————————————————————————
+
+    <!-- 2、外观样式 -->
+    <!-- 
+      (1)、color:rgba(255,255,255,1)
+      (2)、line-height:等于行高可设置垂直居中;
+      (3)、text-align : right/center/left
+      (4)、text-indent : 1px
+      (5)、text-decoration : none/blink(闪烁)/underline/line-through/overline 
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 三、盒子样式 -->
+
+    ————————————————————————————————
+
+    <!-- 1、模式转化 -->
+    <!-- 
+      tips、行内块、块级元素都可以看作文本处理，部分文本样式有效，如text-align : center;/line-height:; 
+      (1)、display：block/inline-block/inline/none(隐藏不保留位置)
+      (2)、触发BFC解决塌陷和浮动带来的问题 ：
+        (
+          ①、float不为none
+          ②、overflow不为visibile
+          ③、display : table/table-cell/inline-block
+          ④、position : 不为relative/static
+        )
+    -->
+
+    ————————————————————————————————
+
+    <!-- 2、基本样式 -->
+    <!-- 
+      (1)、border : 1px solid/dashed/dotted/none red;
+
+      (2)、padding : top right bottom left (会撑开有宽高的盒子,不影响背景跟定位，会影响内容跟浮动)
+
+      (3)、margin : top right bottom left;
+           (
+             margin的塌陷问题：
+             ①、给父级盒子设置边框
+             ②、给父盒子设置内边距
+             ③、overflow : hidden
+           )
+      
+      (4)、盒子阴影
+          box-shadow：h-shadow v-shadow blur spread color inset,h-shadow v-shadow blur spread color inset;
+
+      (5)、border-radius ： 左上 右上 右下 左下 
+
+      (6)、元素隐藏
+          (
+            ①、display ： none;
+            ②、visibility : visible(显示)/hidden(隐藏保留位置);
+            ③、overflow : hidden(内容溢出隐藏) /scroll(滚动条拖动) /auto(内容不超出的时候没有滚动条，超出有)
+            ④、溢出文字隐藏代码
+                white-space : no-wrap
+                overflow : hidden
+                text-overflow : ellipsis
+            ⑤、opacity: 0-1;隐藏盒子+内部内容
+          )
+
+      (7)、鼠标样式
+          cursor : default/point/move/text
+
+      -注意、行内元素的上下的margin/padding无效
+
+      -tips、css画三角形
+          (
+            width : 0;
+            height : 0;
+            border : 100px solid rgba(0,0,0,1)
+          )
+
+      (8)、box-sizing : border-box;
+
+      (9)、min-width:最小宽;max-width:最大宽;
+    -->
+
+    ————————————————————————————————
+
+    <!-- 3、背景 -->
+    <!-- 
+      (1)、background-color
+      (2)、background-image : url();
+      (3)、background-repeat : repeat/no-repeat/repeat-x/repeat-y;
+      (4)、background-position : center/top/left/right/bottom 
+         ( 
+           设置位置20px 20px默认是left top；
+           right 30px bottom 20px；
+           只写两个数值或者数值加方向第一个默认left，第二个默认left 
+         )
+      (5)、background-attachment : scroll(默认，随页面动)/fixed(固定不动)
+      (6)、background-size : contain(按最大宽高撑满)/cover(拉伸撑满)
+
+      *连写、
+       background : url("") no-repeat fixed left top , rgba(多背景颜色写在后面) url("") no-repeat fixed left top / contain;
+
+      (7)、背景颜色渐变
+         (1) 线性渐变
+           background-image : linear-gradient(to right/180deg,yellow 40%,green 60%);
+         (2) 径向渐变
+           background-image : radial-gradient(400px at 100px/left方向 100px/top方向,yellow,green) 
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 四、2D/3D/过渡 -->
+
+    ————————————————————————————————
+
+    <!-- 1、过渡transition -->
+    <!-- 
+      (1)、transition-property : 指定要修改的样式，默认是all;
+      (2)、transition-duration : 过渡时间;
+      (3)、transition-delay : 延时;
+      (4)、transition-timing-function : ease linear step(8);
+      连写、transition: property duration delay timing-function;没有顺序，只有一个时间是过渡时间，两个时第二个是延迟时间 
+      (5)、独有事件.transitonend
+    -->
+
+    ————————————————————————————————
+
+    <!-- 2、2D/3D转换transform -->
+    <!-- 
+      (1)、2D转化：transform ：scale(x,y) rotate(45deg，坐标轴会跟着旋转) origin(x,y) skew(x,y) translate(x,y); 
+      (2)、3D转化：
+            ①、先写透视才可以看到3d效果perspective:1000px;
+            ②、transform : scaleX/Y/Z(x,y) rotateX/Y/Z(34deg) translateX/Y/Z(x,y)
+            ③、transfrm-style : flat(默认值平面)/preserve-3d; 给父盒子添加使父盒子开辟3d空间，子盒子就可以进行3d化操作
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 五、动画 -->
+
+    ————————————————————————————————
+
+    <!-- 1、动画的声明 -->
+    <!-- 写在css里
+      (1)、@keyframes 动画名 {
+          form {开始状态}
+          to {结束状态}
+        }
+      (2)、@keyframes 动画名 {
+          0% {}
+          10% {}
+          50% {}
+          100% {}
+        } 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 2、动画的调用 -->
+    <!-- 
+      (1)、animate-name:;
+      (2)、animate-duration:;
+      (3)、animate-delay:;
+      (4)、animate-timing-function:;
+      (5)、animate-iteration-count: infinite;动画执行次数
+      (6)、animate-direction: normal/reverse(反向)/alternate(反复交替);执行方式方向
+      (7)、animate-fill-mode: forwards;停在结束
+      (8)、animate-play-state: paused;停止
+      连写、animate: 注意两费时间顺序就可以 
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 六、布局方式 -->
+
+    <!-- 小tips -->
+    <!-- 
+      (1)私有前缀
+          ①、谷歌/safari : -webkit-
+          ②、火狐 : -moz-
+          ③、ie : -ms-
+          ④、poera : -o-
+      (2)屏幕尺寸 : 对角线长度
+      (3)屏幕分辨率 : 纵向像素点 * 横向像素点
+      (4)ppi : 像素密度，决定高不高清
+      (5)几倍图除余几，保证在一倍屏上正常显示，通过这个值来识别：[UIScreen mainScreen].scale。
+          矢量图的图片倍率：
+          ①、iphont4 2倍图
+          ②、iphont4s 2倍图
+          ③、iphont5 2倍图
+          ④、iphont5s 2倍图
+          ⑤、iphont6 2倍图
+          ⑥、iphont6 plus 3倍图
+          ⑦、iphont7 2倍图
+          ⑧、iphont7 plus 3倍图
+          ⑨、iphont7s 2倍图
+          ⑩、iphont7s plus 3倍图
+          ①、iphont8 2倍图
+          ②、iphont8 plus 3倍图
+          ③、iPhone XR 2倍图
+          ④、iphontX，iPhone XS， iPhone XS Max 3倍图
+          ⑤、ipod4 2倍图
+      (6) 不同设备像素单位不同，所以统一采用设备无关像素px，px!=px
+          安卓 : dp
+          ios : pt
+          前端 : px
+      (7) 屏幕分类
+          屏幕名称             数值范围
+          超小屏(手机xs)        0-768px
+          小屏(平板sm)          768px-992px
+          中屏(大头电脑md)      992px-1200px
+          大屏(现在的台式机lg)  1200px+
+    -->
+
+    ————————————————————————————————
+
+    <!-- 1、标准流(文档流、普通流) -->
+
+    ————————————————————————————————
+
+    <!-- 2、浮动 -->
+    <!-- 
+      (1)、float : left/right/none;
+        (
+          ①、脱标不占位置
+          ②、不会过内边距
+          ③、对下面的盒子有影响
+          ④、浮动让元素默认有行内块元素特征
+          ⑤、不会覆盖字体/行内元素/行内块元素
+        ) 
+      (2)、清除浮动
+        (
+          ①、clear : left/right/both
+          ②、overflow : hidden/scroll/auto
+          ③、.clearfix : after {
+               content:"";
+               diaplay : block;
+               heigth : 0 ;
+               clear : both ;
+               visibility : hidden ;
+               //*zoom : 1;(ie6)
+            }
+         ④、.clearfix :: before,
+             .clearfix :: after {
+               contain : "";
+               diaplay : table;
+             }
+             .clearfix :: after {
+               clear : both;
+             }
+        )
+    -->
+
+    ————————————————————————————————
+
+    <!-- 3、定位 -->
+    <!-- 
+      (1)、position : static/relative/absolute/fixed 
+           {
+              position : fixed
+              top : 0
+              bottom : 0
+              left : 0
+              right : 0
+              可以使盒子撑满全屏
+           }
+      (2)、z-index : 0
+    -->
+
+    ————————————————————————————————
+
+    <!-- 4、手机流式布局（百分比布局） -->
+    <!-- 
+      宽度自适应，高度一般写死，字体，图标大小都是定死的
+      (1)、左边固定，右边自适应
+      (2)、右边固定，左边自适应
+      (3)、左右两边都固定，中间自适应：写的顺序左右中，左右浮动，中间overflow:hidden;
+      (4)、等分布局 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 5、flex布局/弹性布局 -->
+    <!-- 
+      给父盒子加display:flex;有主轴跟侧轴，默认在主轴排序
+      (1)、flex-direction : row/column/row-reverse/column-reverse;主轴方向
+      (2)、justify-content : flex-start/center/flex-end/space-around/space-between;主轴排序方式
+      (3)、align-items : flex-start/center/flex-end/stretch(默认);侧轴排序方式
+      (4)、flex-wrap : nowrap/wrap;是否换行
+      (5)、align-content : flex-start/center/flex-end/space-around/space-between;(多行排列方式，跟主轴一样)
+      (6)、flex : 5;分配主轴空间，给子元素加
+      (7)、order : 5;定义排列顺序，数值越小，排序越靠前，给子元素加
+      (8)、align-self : flex-start/center/flex-end;单独设置侧轴位置，给子元素加 
+    -->
+
+    ————————————————————————————————
+
+    <!-- 6、响应式布局 -->
+    <!-- 
+      (1)、媒体查询
+            @media screen and (max-width:;) and (min-width:;) {此时显示的样式}
+      (2)、bootstrap栅格系统(框架)
+            类名
+            ①、col-lg/md/sm/xs(什么屏以上生效)-yy(分成多少格，1-12)
+            ②、container类会自动设置版心，有左右各15的padding，是下面类名生效的前提；
+               container-fluid: 宽度百分之一百的容器；
+               row: 作用：抵消15px的padding。
+            ③、col-lg/md/sm/xs(什么屏以上生效)-offset-yy(占几格)列偏移
+            ④、hidden-lg/md/sm/xs(什么屏以上生效)
+    -->
+
+    ————————————————————————————————
+    <!-- 7、rem布局 -->
+    <!-- 
+      @media (min-width: 414px) {
+        /* 640/100 = 414px/x */
+        html {
+          font-size: 64.6875px;
+        }
+      }
+
+      @media (min-width: 640px) {
+        html {
+          font-size: 100px;
+        }
+      } 
+
+      *js写法
+        function fn(){
+          var width = window.innerWidth;(窗口的宽度)
+          width = Math.min(width, 750);
+          width = Math.max(width , 320); 
+          document.documentElement.style.fontSize = width/15 + 'px';
+        }
+        fn();
+        window.onresize = fn;(窗口变化事件)
+    -->
+
+    ———————————————————————————————— ————————————————————————————————
+    ———————————————————————————————— ————————————————————————————————
+
+    <!-- 七、less(css预处理工具，工具类还有sass/stylus) -->
+    <!-- 
+      语法
+      (1)、@变量名：值；
+           样式 : @变量名 
+      (2)、//注释不会再css中出现
+      (3)、选择器可嵌套
+            p{
+              .a{后代}
+              >.a{子代}
+              &.a{交集}
+            }
+      (4)、支持运算，属性值可以公式出现
+      (5)、函数 : 
+           声明
+           .border-radius(@value) {
+            -webkit-border-radius: @value;
+            -moz-border-radius: @value;
+            -ms-border-radius: @value;
+            -o-border-radius: @value;
+            border-radius: @value;
+          }
+           调用
+           .right {
+            .border-radius(10px);
+           } 
+    -->
+  </body>
+</html>
