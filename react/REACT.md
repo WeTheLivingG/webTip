@@ -367,7 +367,7 @@ class Hello extends React.Component {
   }
 
   render() {
-    return <button onClick={this.handleClick}>+1</button>
+    return <button onClick={this.handleClick()}>+1</button>
   }
 }
 
