@@ -78,9 +78,9 @@ http://xxxx.com/studetns/id patch 方式
 const vm = new Vue({
   el: '#app',
   data: {
-    name: 'Hello World'
-  }
-})
+    name: 'Hello World',
+  },
+});
 ```
 
 ## 二、{{}} 插值表达式（小胡子语法）
@@ -221,7 +221,7 @@ v-if="true"
 1. 理论依据 Object.defineProperty
 
 ```js
-let obj = {}
+let obj = {};
 Object.defineProperty(obj, 'name', {
   // 默认只读不可赋值
   writable: true,
@@ -230,8 +230,8 @@ Object.defineProperty(obj, 'name', {
   // 默认不可删除
   configurable: true,
   // 设置默认值
-  value: '123'
-})
+  value: '123',
+});
 Object.defineProperty(obj, 'name', {
   // 不能跟writable，value同时出现
   set(value) {
@@ -240,8 +240,8 @@ Object.defineProperty(obj, 'name', {
   },
   get() {
     // 属性被获取时出发事件，用户获取的是当前函数的返回值
-  }
-})
+  },
+});
 ```
 
 2. 功能实现
@@ -254,23 +254,23 @@ Object.defineProperty(obj, 'name', {
 
 ```js
 let obj = {
-  name: '胡聪聪出来接锅'
-}
-let nameValue = ''
-let hcc = document.querySelector('#hcc')
+  name: '胡聪聪出来接锅',
+};
+let nameValue = '';
+let hcc = document.querySelector('#hcc');
 // 数据到视图的绑定
 Object.defineProperty(obj, 'name', {
   set(value) {
-    hcc.value = nameValue = value
+    hcc.value = nameValue = value;
   },
   get() {
-    return nameValue
-  }
-})
+    return nameValue;
+  },
+});
 // 视图到数据的绑定
-hcc.oninput = function() {
-  obj.name = this.value
-}
+hcc.oninput = function () {
+  obj.name = this.value;
+};
 ```
 
 ## 十、v-on @ 事件注册
@@ -343,21 +343,21 @@ const vm = Vue({
   el: '#app',
   data: {
     num1: 0,
-    num2: 0
+    num2: 0,
   },
   methods: {},
   computed: {
     result() {
-      return this.num1 + this.num2
+      return this.num1 + this.num2;
     },
     result: {
       get() {
-        return 计算属性获取到的值
+        return 计算属性获取到的值;
       },
-      set(value) {}
-    }
-  }
-})
+      set(value) {},
+    },
+  },
+});
 ```
 
 ## 十六、watch 监视属性
@@ -374,21 +374,21 @@ const vm = Vue({
     num2: 0,
     car: {
       brand: '凤凰',
-      price: 50
-    }
+      price: 50,
+    },
   },
   methods: {},
   computed: {},
   watch: {
     num1(newValue, oldValue) {},
-    'car.price': function() {},
+    'car.price': function () {},
     car: {
       handler() {},
       deep: true, //深度监视，每个属性改变都会监视
-      immediate: true //渲染完后，立马先监视一次
-    }
-  }
-})
+      immediate: true, //渲染完后，立马先监视一次
+    },
+  },
+});
 ```
 
 ## 十七、\$set 处理动态添加属性问题
@@ -400,9 +400,9 @@ const vm = Vue({
 3. 语法
 
 ```js
-vm.$set(obj, 'key', 'value')
-Vue.$set(obj, 'key', 'value')
-this.$set(obj, 'key', 'value')
+vm.$set(obj, 'key', 'value');
+Vue.$set(obj, 'key', 'value');
+this.$set(obj, 'key', 'value');
 ```
 
 ## 十八、\$nextTick Vue 中的异步问题
@@ -412,7 +412,7 @@ this.$set(obj, 'key', 'value')
 2. 解决方案：通过下述方法获取异步元素，解决 autofocus 等这类有方法属性的样式，因为它只执行一次，在解析的时候就已经执行了，再次渲染的时候不会再出发这个属性
 
 ```js
-this.$nextTick(function() {})
+this.$nextTick(function () {});
 ```
 
 ## 十九、Vue.filter 过滤器
@@ -426,7 +426,7 @@ this.$nextTick(function() {})
 全局注册:
 
 ```js
-Vue.filter('filterName', function(msg, value) {})
+Vue.filter('filterName', function (msg, value) {});
 // 函数的第一个参数，就是|前面的数据
 // 后面的所有的参数都是 通过()传递进来的参数
 ```
@@ -436,9 +436,9 @@ Vue.filter('filterName', function(msg, value) {})
 ```js
 const vm = new Vue({
   filters: {
-    filterName(msg, value) {}
-  }
-})
+    filterName(msg, value) {},
+  },
+});
 ```
 
 ## 二十、Vue.directive 自定义指令及自定义指令中的钩子函数
@@ -448,7 +448,7 @@ const vm = new Vue({
 全局注册
 
 ```js
-Vue.directive('不加v的指令名', { 钩子函数 })
+Vue.directive('不加v的指令名', { 钩子函数 });
 ```
 
 局部注册
@@ -609,25 +609,25 @@ axios.get('url').then(成功的回调).catch(失败的回调)
 
 ```js
 // 一般都会命名为$http
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios;
 ```
 
 4. 设置默认的根路径
 
 ```js
-axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
+axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/';
 ```
 
 5. 设置拦截器，发送 ajax 之前对请求头进行处理
 
 ```js
-axios.interceptors.request.use(function(config) {
+axios.interceptors.request.use(function (config) {
   // config 就是拦截到的请求相关的所有的信息
   // 这个信息是可以进行修改的
-  config.headers.Authorization = localStorage.getItem('token')
+  config.headers.Authorization = localStorage.getItem('token');
   // return config不能动，这个函数中必须有这个内容
-  return config
-})
+  return config;
+});
 ```
 
 # 组件化开发
@@ -674,7 +674,7 @@ axios.interceptors.request.use(function(config) {
 {
   components: {
     componentName: {
-      template: `组件模板`
+      template: `组件模板`;
     }
   }
 }
@@ -693,19 +693,19 @@ Vue.component('father', {
   data() {
     return {
       msg: '这是父组件中的数据',
-      num: 9999
-    }
-  }
-})
+      num: 9999,
+    };
+  },
+});
 
 Vue.component('son', {
   template: '<div>这是子组件{{msgfromfather}}, {{numfromfather}}</div>',
-  props: ['msgfromfather', 'numfromfather']
-})
+  props: ['msgfromfather', 'numfromfather'],
+});
 
 const vm = new Vue({
-  el: '#app'
-})
+  el: '#app',
+});
 ```
 
 ## 四、组件之间的通信-子=>父
@@ -717,37 +717,37 @@ Vue.component('father', {
   template: `<div>这是父组件：儿子的来信{{msgFromSon}}<son @sendmsg="getMsgFromSon"/></div>`,
   data() {
     return {
-      msgFromSon: ''
-    }
+      msgFromSon: '',
+    };
   },
   methods: {
     getMsgFromSon(value) {
       // console.log("儿子来信了：说啥来着，看一下：" + value)
-      this.msgFromSon = value
-    }
-  }
-})
+      this.msgFromSon = value;
+    },
+  },
+});
 
 Vue.component('son', {
   template:
     "<div>这是子组件 <button @click='sendMsgToFather'>发消息给父亲</button></div>",
   data() {
     return {
-      msg: '没钱了，打点钱！'
-    }
+      msg: '没钱了，打点钱！',
+    };
   },
   methods: {
     sendMsgToFather() {
       // 这个点击事件中，我们需要把子组件中的msg发送给父组件去使用
 
-      this.$emit('sendmsg', this.msg)
-    }
-  }
-})
+      this.$emit('sendmsg', this.msg);
+    },
+  },
+});
 
 const vm = new Vue({
-  el: '#app'
-})
+  el: '#app',
+});
 ```
 
 ## 五、组件之间的通信-兄弟=>兄弟
@@ -755,33 +755,33 @@ const vm = new Vue({
 global event bus
 
 ```js
-const bus = new Vue()
+const bus = new Vue();
 
 const brotherA = {
   template: '',
   methods: {
     getMsg(value) {
-      console.log(value)
-    }
+      console.log(value);
+    },
   },
   created() {
-    bus.$on('事件名称', this.getMsg)
-  }
-}
+    bus.$on('事件名称', this.getMsg);
+  },
+};
 
 const brotherB = {
   template: "<div><button @click='btnClick'>发送消息给A</button></div>",
   data() {
     return {
-      msg: ''
-    }
+      msg: '',
+    };
   },
   methods: {
     btnClick() {
-      bus.$emit('事件名称', this.msg)
-    }
-  }
-}
+      bus.$emit('事件名称', this.msg);
+    },
+  },
+};
 ```
 
 ## 五、组件之间的通信-this.\$refs(不推荐使用，了解即可)
@@ -800,23 +800,23 @@ Vue.component('father', {
     "<div>这是父组件 <son ref='child'></son>  <button @click='clkHandler'>获取子组件中的数据</button></div>",
   methods: {
     clkHandler() {
-      console.log(this.$refs.child)
-    }
-  }
-})
+      console.log(this.$refs.child);
+    },
+  },
+});
 
 Vue.component('son', {
   template: '<div>这是子组件</div>',
   data() {
     return {
-      msg: 'hello world'
-    }
-  }
-})
+      msg: 'hello world',
+    };
+  },
+});
 
 const vm = new Vue({
-  el: '#app'
-})
+  el: '#app',
+});
 ```
 
 2. 获取父元素
@@ -826,10 +826,10 @@ Vue.component('father', {
   template: '<div>这是父组件 <son></son></div>',
   data() {
     return {
-      msg: 'hello world'
-    }
-  }
-})
+      msg: 'hello world',
+    };
+  },
+});
 
 Vue.component('son', {
   template:
@@ -839,14 +839,14 @@ Vue.component('son', {
       // console.log(this.$parent)
       // this.$parent获取到的就是当前组件的父组件实例
       // 可以通过这个来访问父组件中所有内容
-      console.log(this.$parent.msg)
-    }
-  }
-})
+      console.log(this.$parent.msg);
+    },
+  },
+});
 
 const vm = new Vue({
-  el: '#app'
-})
+  el: '#app',
+});
 ```
 
 ## 六、Prop 校验
@@ -947,8 +947,8 @@ const vm = new Vue({
 6. 编程式导航
 
 ```js
-this.$router.push('/home')
-this.$router.push({ path: '/home' })
+this.$router.push('/home');
+this.$router.push({ path: '/home' });
 ```
 
 7. router 里的重定向+路由嵌套
@@ -1030,23 +1030,23 @@ const detail = {
   created() {
     // 当前组件中获取路由的？传递的参数，
     // 我们可以通过this.$route.query就可以获取到所有的参数了
-    console.log(this.$route.query)
-  }
-}
+    console.log(this.$route.query);
+  },
+};
 
 const router = new VueRouter({
   routes: [
     {
       path: '/detail',
-      component: detail
-    }
-  ]
-})
+      component: detail,
+    },
+  ],
+});
 
 const vm = new Vue({
   el: '#app',
-  router
-})
+  router,
+});
 ```
 
 2. 动态传参、动态路由
@@ -1058,23 +1058,23 @@ const detail = {
   template: '<div>这是一个详情页组件</div>',
   created() {
     // 如果使用的是动态路由进行参数传递的，那么我们可以通过this.$route.params来进行参数获取
-    console.log(this.$route.params)
-  }
-}
+    console.log(this.$route.params);
+  },
+};
 
 const router = new VueRouter({
   routes: [
     {
       path: '/detail/:id',
-      component: detail
-    }
-  ]
-})
+      component: detail,
+    },
+  ],
+});
 
 const vm = new Vue({
   el: '#app',
-  router
-})
+  router,
+});
 ```
 
 ## 九、axios 设置请求/响应拦截器，设置默认根路径，添加到 vue 原型上
@@ -1182,13 +1182,13 @@ Vue.prototype.\$http = axios;
 代码演示(新建一个 webpack.config.js)
 
 ```js
-let path = require('path')
+let path = require('path');
 module.exports = {
   mode: 'development',
   entry: path.join(__dirname, 'index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   // 在webapck中配置loader
   // 用到的 module 属性
@@ -1200,13 +1200,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
-  }
-}
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
+};
 ```
 
 ## 四、ES6 中的模块化语法
@@ -1424,10 +1424,10 @@ Vue.component('mycomp', {
     "<div>1： <slot name='first' :btnText='btnText'></slot> 2：<slot name='second' :btnText='btnText'></slot></div>",
   data() {
     return {
-      btnText: '按钮文字'
-    }
-  }
-})
+      btnText: '按钮文字',
+    };
+  },
+});
 ```
 
 ## 十二、token 令牌
@@ -1464,25 +1464,25 @@ Vue.component('mycomp', {
 // promise对象的.then方法中接收到的失败的回调函数，会在当前promise对象处于失败(rejected)状态的时候自动执行
 
 function timeOut(time) {
-  return new Promise(function(resolve, reject) {
-    setTimeout(function() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
       // 这个回调函数中，不需要涉及任何具体的业务操作
       // 只需要修改当前promise对象的状态即可！！
       // resolve和reject在调用的时候，是可以传递数据的，这个数据会最终被传递到成功或者失败的回调函数中
       // resolve(123)
       // resolve();
-      reject()
-    }, time)
-  })
+      reject();
+    }, time);
+  });
 }
 
 timeOut(1000)
-  .then(function() {
-    console.log('成功了')
+  .then(function () {
+    console.log('成功了');
   })
-  .catch(function() {
-    console.log('失败了')
-  })
+  .catch(function () {
+    console.log('失败了');
+  });
 ```
 
 ```js
@@ -1493,22 +1493,22 @@ timeOut(1000)
 // Promise对象有个方法，race方法
 // 当被传入的promise有一个（第一个）完成的时候，就会执行这个race的回调
 // Promise.race([t1, t2]).then(function(){console.log("有一个异步率先完成了");})
-let t1 = timeOut(1000)
-let t2 = timeOut(1000)
-t1.then(function() {
-  console.log('我是t1')
-})
-t2.then(function() {
-  console.log('我是t2')
-})
+let t1 = timeOut(1000);
+let t2 = timeOut(1000);
+t1.then(function () {
+  console.log('我是t1');
+});
+t2.then(function () {
+  console.log('我是t2');
+});
 ```
 
 ## 十四、async、await（异步终极解决方案 es7）
 
 ```js
 async function test() {
-  let num = await timeOut(1000)
-  console.log('异步代码完成' + num)
+  let num = await timeOut(1000);
+  console.log('异步代码完成' + num);
 }
 ```
 
@@ -1590,27 +1590,27 @@ const store = new Vuex.Store({
 // 1. 在main文件中 import store from "store路径"
 // 2. 写到vue实例中
 
-import store from 'store路径'
+import store from 'store路径';
 new Vue({
-  store
-})
+  store,
+});
 
 // 3. 在引入文件及子组件都可调用
 
 // 4. state的调用
 // 方法中调用
-this.$store.state
+this.$store.state;
 // 标签中调用
-$store.state
+$store.state;
 
 // 5. mutations调用
-this.$store.commit('updateMsg', value)
+this.$store.commit('updateMsg', value);
 
 // 6. getters调用
-this.$store.getters.evenNum(value)
+this.$store.getters.evenNum(value);
 
 // 7. actions调用
-this.$store.dispatch('evenNum', value)
+this.$store.dispatch('evenNum', value);
 ```
 
 3. 模块化
@@ -1718,3 +1718,5 @@ vue-i18n 做国际化处理(语言切换)
 ## mock.js 作假数据
 
 ## 反向代理
+
+## 路由传参
