@@ -1838,3 +1838,100 @@ connect(
   mapDispatchToProps
 )(Counter)
 ```
+
+# REDUX
+
+## store----------------------
+store.dispatch方法会触发 Reducer 的自动执行。为此，Store 需要知道 Reducer 函数，做法就是在生成 Store 的时候，将 Reducer 传入createStore方法。
+```js
+import {creatStore} from 'redux'
+const sotre = creatStore(reducer)
+```
+
+## state-----------------------
+```js
+import {creatStore} from 'redux'
+const sotre = creatStore(fn)
+
+const state = store.getState()
+```
+
+## action----------------------
+实际上就是一个对象
+```js
+const action = {
+  type:'ADD_TODO',
+  paylod:'learn redux'
+}
+```
+
+## action creator--------------
+
+```js
+const ADD_TODO = '添加 TODO';
+
+function addTodo(text) {
+  return {
+    type: ADD_TODO,
+    text
+  }
+}
+
+const action = addTodo('Learn Redux');
+```
+
+## store.dispatch
+store.dispatch()是 View 发出 Action 的唯一方法。
+store.dispatch方法会触发 Reducer 的自动执行。为此，Store 需要知道 Reducer 函数，做法就是在生成 Store 的时候，将 Reducer 传入createStore方法。
+```js
+import { createStore } from 'redux';
+const store = createStore(reducer);
+
+store.dispatch({
+  type: 'ADD_TODO',
+  payload: 'Learn Redux'
+});
+```
+
+## reducer
+Store 收到 Action 以后，必须给出一个新的 State，这样 View 才会发生变化。这种 State 的计算过程就叫做 Reducer。
+Reducer 是一个函数，它接受 Action 和当前 State 作为参数，返回一个新的 State。
+```js
+const defaultState = 0;
+const reducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case 'ADD':
+      return state + action.payload;
+    default: 
+      return state;
+  }
+};
+
+const state = reducer(1, {
+  type: 'ADD',
+  payload: 2
+});
+```
+
+## store.subscribe()
+
+## 中间件-applyMiddlewares
+```js
+import { applyMiddleware, createStore } from 'redux';
+import createLogger from 'redux-logger';
+const logger = createLogger();
+
+const store = createStore(
+  reducer,
+  applyMiddleware(logger)
+);
+```
+
+（1）createStore方法可以接受整个应用的初始状态作为参数，那样的话，applyMiddleware就是第三个参数了。
+```js
+const store = createStore(
+  reducer,
+  initial_state,
+  applyMiddleware(logger)
+);
+```

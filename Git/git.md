@@ -11,3 +11,16 @@
 6).git push origin master //推送
 
 ```
+
+## 拉取远程分支
+
+```js
+
+1)、本地无代码
+git clone -b dev 代码仓库地址 （dev是分支名称）
+
+2)、本地有代码
+git fetch origin dev（dev即分支名）
+git checkout -b LocalDev origin/dev (LocalDev 为本地分支名，dev为远程分支名)
+
+```
