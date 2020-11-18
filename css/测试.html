@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 10px;
+            height: 10px;
+            /* background-color: #000; */
+            border: 1px solid #ccc
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ccc
+        }
+        .dazhaohu {
+            width: 500px;
+            height: 500px;
+            display: grid;
+            border: 2px solid #000;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: repeat(4, 25%);
+        }
+        .nihao {
+            float: left;
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            vertical-align: bottom;
+        }
+        .buhao {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="dazhaohu">
+        <!-- <div class="nihao">1111111</div> -->
+        <!-- <div class="buhao">2222222</div> -->
+    </div>
+    <!-- <table>
+        <tr>
+            <td rowspan="3" >1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>     -->
+</body>
+<script>
+    let a = 1 
+    function b() {
+        console.log(1)
+    }
+    b()
+    console.log(typeof function b() { })
+</script>
+</html>

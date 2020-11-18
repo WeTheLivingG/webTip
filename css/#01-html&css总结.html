@@ -1,4 +1,4 @@
-<!-- 生命html版本,这里是h5 -->
+<!-- 声明html版本,这里是h5 -->
 <!DOCTYPE html>
 
 <!-- 设置语言 -->
@@ -80,6 +80,7 @@
     <!-- 为文字组成的块级元素不能放其他块级元素 -->
     <p></p>
 
+    <!-- 会保留空格和换行 -->
     <pre></pre>
 
     <!-- <style> list-style:none; </style> -->
@@ -409,8 +410,8 @@
 
     <!-- 6、结构伪类选择器 -->
     <!-- 
-     (1)、：first-child 第一个元素
-     (2)、：last-child 最后一个元素
+     (1)、p：first-child 第一个元素,且是p
+     (2)、p：last-child 最后一个元素，且是p
      (3)、：nth-child(odd) 第n个元素 ==> 偶数：n = even/2n 奇数：n = odd/2n+1 全选：n = n 
     -->
 
@@ -447,7 +448,7 @@
       (2)、font-weight：lighter/narmal(400)/bold(700)/bolder; 直接写数值没有单位
       (3)、font-size：
       (4)、font-family：
-      (5)、vertical-align：top/middle/baseline/bottom; 对齐方式 
+      (5)、vertical-align：top/middle/baseline/bottom; 对齐方式 行内元素生效如：图片img
 
       -连写、font: italic 900 100px/100px(行高) 'microsoft yahei'; 
 
