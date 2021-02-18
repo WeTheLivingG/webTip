@@ -65,5 +65,6 @@ git reset --hard 版本号
 git checkout 文件名 //从暂存区拉取到工作区
 8)、拉取服务器最近一次提交到暂存区
 git reset --hard HEAD^
+git reset --hard HEAD~n //回退到第n次
 git checkout 文件名 //从暂存区拉取到工作区
 ```

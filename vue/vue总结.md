@@ -1529,7 +1529,8 @@ async function test() {
 import home from "路径"
 
 // 这样引入文件可实现首屏渲染效果
-const home = () => import("/_ webpackChunkName:"name"在这里写名字，就可以实现多个文件打成一个包，按照包名进行分组，分组加载 _/路径")
+resolve=>(require(["@/components/HelloWorld"],resolve))
+const HelloWorld = ()=>import("@/components/HelloWorld")
 ```
 
 ## 十七、vuex 状态（数据）管理模式
